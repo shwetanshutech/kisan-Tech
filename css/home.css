@@ -1,0 +1,109 @@
+.component {
+  max-width: 100%;
+  height: 100%;
+  background-image: url(../images/flag.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  margin: 0px;
+}
+
+.canvas {
+  min-width: 100%;
+  min-height: 100vh;
+  background: rgba(219, 246, 233, 0.72);
+  backdrop-filter: blur(5px);
+  box-shadow: -6px -10px 19px -5px rgba(0, 0, 0, 0.75) inset;
+  -webkit-box-shadow: -6px -10px 19px -5px rgba(0, 0, 0, 0.75) inset;
+  -moz-box-shadow: -6px -10px 19px -5px rgba(0, 0, 0, 0.75) inset;
+  clip-path: polygon(0% 0%, 64% 0, 78% 50%, 64% 100%, 0% 100%);
+  opacity: 1 !important;
+  z-index: 999 !important;
+}
+.canvas > h1 {
+  margin: 0px;
+  font-size: 40px;
+  overflow-wrap: break-word;
+}
+.canvas > .text {
+  position: absolute;
+  font-size: large;
+  bottom: 30%;
+  left: 30px;
+  width: 50%;
+}
+.resources {
+  display: flex;
+  justify-content: flex-start;
+}
+a {
+  margin: 2px 10px;
+}
+@media (max-width: 1300px) {
+  .resources {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 499px) {
+  .canvas {
+    clip-path: none;
+  }
+  .canvas > .text {
+    min-width: 90% !important;
+  }
+}
+
+@media (max-width: 281px) {
+  .canvas > .text {
+    width: 85%;
+  }
+}
+
+@media (width: 320px) {
+  .canvas {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 1040px) {
+  .canvas {
+    padding-top: 120px !important;
+  }
+}
+
+@media (max-width: 554px) {
+  .canvas {
+    padding-top: 60px;
+    clip-path: none;
+  }
+  .canvas > .text {
+    min-width: 90% !important;
+  }
+
+  .canvas > .text > p {
+    margin-bottom: 40px !important;
+  }
+}
+
+@media (width: 375px) {
+  .canvas > .text {
+    position: absolute;
+    left: 20px;
+    top: 150px;
+  }
+}
+
+@media (width: 411px) {
+  .canvas > .text {
+    position: absolute;
+    left: 20px;
+    top: 150px;
+  }
+}
+
+@media (width: 414px) {
+  .canvas > .text {
+    position: absolute;
+    left: 20px;
+    top: 150px;
+  }
+}
