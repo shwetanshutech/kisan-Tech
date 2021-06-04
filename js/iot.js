@@ -1,15 +1,3 @@
-function copyToClipboard() {
-  var $temp = $("<input>");
-  var $url = $(location).attr("href");
-
-  $(".clipboard").on("click", function () {
-    $("body").append($temp);
-    $temp.val($url).select();
-    document.execCommand("copy");
-    $temp.remove();
-    alert("URL Copied.");
-  });
-}
 const imgs = document.querySelectorAll(".img-select a");
 const imgBtns = [...imgs];
 let imgId = 1;
@@ -33,3 +21,6 @@ function slideImage() {
 }
 
 window.addEventListener("resize", slideImage);
+function alertCart() {
+  alert("Added to Chart");
+}

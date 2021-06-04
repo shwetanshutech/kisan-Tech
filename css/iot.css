@@ -15,7 +15,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   transition: 0.6s;
-  padding: 40px 100px;
+  padding: 40px 10px;
+}
+#url_public_id {
+  display: none;
 }
 
 .home,
