@@ -39,16 +39,14 @@
                 <div class="slider-tab"></div>
             </div>
             <div class="form-inner">
-                <form action="#" class="login">
+                <form id="login-form" class="login">
                     <div class="field">
-                        <input type="text" placeholder="Email Address" required>
+                        <input id="login-email" type="text" placeholder="Email Address" required>
                     </div>
                     <div class="field">
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" id="login-password" placeholder="Password" required>
                     </div>
-                    <div class="pass-link">
-                        <a href="#">Forgot password?</a>
-                    </div>
+
                     <div class="field btn">
                         <div class="btn-layer"></div>
                         <input type="submit" value="Login">
@@ -57,15 +55,15 @@
                         Not a member? <a href="">Signup now</a>
                     </div>
                 </form>
-                <form action="#" class="signup">
+                <form class="signup" id="signup-form">
                     <div class="field">
-                        <input type="text" placeholder="Email Address" required>
+                        <input type="text" id="signup-email" placeholder="Email Address" required>
                     </div>
                     <div class="field">
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" id="signup-password" placeholder="Password" required>
                     </div>
                     <div class="field">
-                        <input type="password" placeholder="Confirm password" required>
+                        <input type="password" id="signup-cpassword" placeholder="Confirm password" required>
                     </div>
                     <div class="field btn">
                         <div class="btn-layer"></div>
@@ -94,6 +92,38 @@
             return false;
         });
     </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.4/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCgAcsDIncy6W0OxDvoxQGd4xCBchLNVek",
+            authDomain: "cleanx-y.firebaseapp.com",
+            projectId: "cleanx-y",
+            storageBucket: "cleanx-y.appspot.com",
+            messagingSenderId: "91637186924",
+            appId: "1:91637186924:web:11f039496b4e2593ee7349",
+            measurementId: "G-2ZXWPQ8Y17"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // update firestore settings
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="./js/auth.js"></script>
 </body>
 
 </html>
