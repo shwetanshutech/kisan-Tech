@@ -22,5 +22,5 @@ function slideImage() {
 
 window.addEventListener("resize", slideImage);
 function alertCart() {
-  alert("Added to Chart");
+  alert("Added to the cart");
 }
