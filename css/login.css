@@ -188,13 +188,7 @@ form .btn .btn-layer {
   width: 300%;
   position: absolute;
   left: -100%;
-  background: -webkit-linear-gradient(
-    right,
-    #df8927,
-    #2abe79,
-    #a445b2,
-    #fa4299
-  );
+  background: -webkit-linear-gradient(left, #37cc87, #e79e31);
   border-radius: 5px;
   transition: all 0.4s ease;
 }
